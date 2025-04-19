@@ -1,0 +1,210 @@
+/* Base Styles */
+:root {
+    --dark-bg: #121212;
+    --darker-bg: #1e1e1e;
+    --primary: #1da1f2;
+    --secondary: #0a66c2;
+    --text: #e1e1e1;
+    --text-muted: #b3b3b3;
+    --border: #333;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .scheduler-app {
+    min-height: 100vh;
+    background-color: var(--dark-bg);
+    color: var(--text);
+  }
+  
+  /* Header */
+  .app-header {
+    background-color: var(--darker-bg);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .auth-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 24px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .auth-btn.twitter {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .auth-btn.linkedin {
+    background-color: var(--secondary);
+    color: white;
+  }
+  
+  /* Main Content */
+  .app-main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+  
+  .tab {
+    background: none;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .tab.active {
+    color: var(--text);
+    border-bottom: 2px solid var(--primary);
+  }
+  
+  /* Post Form */
+  .post-form {
+    background-color: var(--darker-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border);
+  }
+  
+  .post-input {
+    width: 100%;
+    min-height: 120px;
+    background-color: #2a2a2a;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem;
+    color: var(--text);
+    resize: vertical;
+    margin-bottom: 1rem;
+  }
+  
+  .schedule-options {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .time-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #2a2a2a;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+  
+  .icon {
+    color: var(--text-muted);
+  }
+  
+  .date-picker,
+  .time-picker {
+    background: none;
+    border: none;
+    color: var(--text);
+    outline: none;
+  }
+  
+  .schedule-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Posts List */
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .post-card {
+    background-color: var(--darker-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  
+  .post-content {
+    margin-bottom: 0.5rem;
+  }
+  
+  .post-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  
+  .platform {
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .platform.twitter {
+    background-color: rgba(29, 161, 242, 0.2);
+    color: var(--primary);
+  }
+  
+  .platform.linkedin {
+    background-color: rgba(10, 102, 194, 0.2);
+    color: var(--secondary);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .app-header {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+    }
+  
+    .auth-buttons {
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    .schedule-options {
+      flex-direction: column;
+    }
+  }
